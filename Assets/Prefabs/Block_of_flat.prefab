@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212431799922603456}
   - component: {fileID: 61012399411370128}
   m_Layer: 0
-  m_Name: spr_building_0
+  m_Name: Block_of_flat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
