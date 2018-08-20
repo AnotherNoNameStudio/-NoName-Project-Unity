@@ -1322,10 +1322,10 @@ GameObject:
   m_Component:
   - component: {fileID: 300457962}
   - component: {fileID: 300457963}
-  - component: {fileID: 300457960}
   - component: {fileID: 300457961}
   - component: {fileID: 300457965}
   - component: {fileID: 300457964}
+  - component: {fileID: 300457960}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3865,6 +3865,10 @@ Prefab:
       propertyPath: Player
       value: 
       objectReference: {fileID: 300457962}
+    - target: {fileID: 1314660822896792, guid: 8dbdac865017aca479557579f70e4aa2, type: 2}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8dbdac865017aca479557579f70e4aa2, type: 2}
   m_IsPrefabAsset: 0
@@ -7192,7 +7196,7 @@ GameObject:
   - component: {fileID: 1393576202}
   - component: {fileID: 1393576201}
   m_Layer: 5
-  m_Name: Image
+  m_Name: SceneFader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
