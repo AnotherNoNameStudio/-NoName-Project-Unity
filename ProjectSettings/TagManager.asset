@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Building
+  - Ground
+  - Obstacle
   layers:
   - Default
   - TransparentFX
@@ -14,10 +16,10 @@ TagManager:
   - UI
   - 
   - 
+  - Player
+  - 
   - Buildings
   - Backgroud
-  - 
-  - 
   - 
   - 
   - 
@@ -47,6 +49,9 @@ TagManager:
     locked: 0
   - name: Buildings
     uniqueID: 1488987049
+    locked: 0
+  - name: Obstacle
+    uniqueID: 4228841601
     locked: 0
   - name: Player
     uniqueID: 2110129405

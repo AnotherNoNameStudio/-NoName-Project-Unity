@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4401914273106762}
   - component: {fileID: 108040168021879172}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 212646819666578396}
   - component: {fileID: 61650498659794504}
   - component: {fileID: 114671092361937702}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Portal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,9 +56,9 @@ GameObject:
   - component: {fileID: 212541779842977378}
   - component: {fileID: 114444546094406256}
   - component: {fileID: 60336356223307586}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Building
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,7 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4147404951788740}
   - component: {fileID: 108684419765793248}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Door Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1671023620816822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.7369, y: 5.5412, z: 0}
+  m_LocalPosition: {x: 6.18, y: 3.23, z: 0}
   m_LocalScale: {x: 1.3275, y: 1.75, z: 1}
   m_Children:
   - {fileID: 4401914273106762}
@@ -329,7 +329,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1488987049
   m_SortingLayer: 2
-  m_SortingOrder: 5
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1e49de9f536764d92a2151c009cf4df0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -373,8 +373,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1488987049
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 648a1f6180632ac459024e21089910b6, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}

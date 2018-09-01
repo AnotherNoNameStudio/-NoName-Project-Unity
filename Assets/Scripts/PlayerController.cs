@@ -3,62 +3,73 @@
 public class PlayerController : MonoBehaviour
 {
 	public float moveSpeed = 3;
-	private Animator anim;
+	private Animator animator;
+    private bool isPlayerMoving;
+    private Vector2 lastDirectory;
 
 	// Use this for initialization
 	void Start ()
     {
-		anim = GetComponent<Animator>();
-	}
+		animator = GetComponent<Animator>();
+    }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        move();
-        attack();
+        Move();
+        Attack();
 	}
 
-    private void move()
+    private void Move()
     {
+        isPlayerMoving = false;
+
         // look at edit -> project settings -> input
         if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)
         {
             transform.Translate(new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime, 0f));
+            isPlayerMoving = true;
+            lastDirectory = new Vector2(Input.GetAxisRaw("Horizontal"), 0f);
         }
         if (Input.GetAxisRaw("Vertical") > 0.5f || Input.GetAxisRaw("Vertical") < -0.5f)
         {
             transform.Translate(new Vector2(0f, Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime));
+            isPlayerMoving = true;
+            lastDirectory = new Vector2(0f, Input.GetAxisRaw("Vertical"));
         }
 
         // update values of Animator's MoveX and MoveY
-        anim.SetFloat("MoveX", Input.GetAxisRaw(("Horizontal")));
-        anim.SetFloat("MoveY", Input.GetAxisRaw(("Vertical")));
+        animator.SetFloat("MoveX", Input.GetAxisRaw(("Horizontal")));
+        animator.SetFloat("MoveY", Input.GetAxisRaw(("Vertical")));
+        animator.SetBool("IsPlayerMoving", isPlayerMoving);
+        animator.SetFloat("LastMoveX", lastDirectory.x);
+        animator.SetFloat("LastMoveY", lastDirectory.y);
     }
 
-    private void attack()
+    private void Attack()
     {
         if (Input.GetButtonDown("Attack_Horizontal"))
         {
-            var moveX = anim.GetFloat("MoveX");
+            var moveX = animator.GetFloat("MoveX");
             if (moveX > 0)
             {
-                anim.SetTrigger("AttackRight");
+                animator.SetTrigger("AttackRight");
             }
             if (moveX < 0)
             {
-                anim.SetTrigger("AttackLeft");
+                animator.SetTrigger("AttackLeft");
             }
         }
         if (Input.GetButtonDown("Attack_Vertical"))
         {
-            var moveY = anim.GetFloat("MoveY");
+            var moveY = animator.GetFloat("MoveY");
             if (moveY > 0)
             {
-                anim.SetTrigger("AttackUp");
+                animator.SetTrigger("AttackUp");
             }
             if (moveY < 0)
             {
-                anim.SetTrigger("AttackDown");
+                animator.SetTrigger("AttackDown");
             }
         }
     }
