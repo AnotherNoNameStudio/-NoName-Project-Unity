@@ -48,26 +48,28 @@ public class PlayerController : MonoBehaviour
 
     private void Attack()
     {
-        if (Input.GetButtonDown("Attack_Horizontal"))
+        if (Input.GetButtonDown("Attack"))
         {
+            animator.SetTrigger("IsPlayerAttacking");
+
             var moveX = animator.GetFloat("MoveX");
-            if (moveX > 0)
+            var lastMoveX = animator.GetFloat("LastMoveX");
+            var moveY = animator.GetFloat("MoveY");
+            var lastMoveY = animator.GetFloat("LastMoveY");
+
+            if (moveX > 0 && lastMoveX > 0)
             {
                 animator.SetTrigger("AttackRight");
             }
-            if (moveX < 0)
+            if (moveX < 0 && lastMoveX < 0)
             {
                 animator.SetTrigger("AttackLeft");
             }
-        }
-        if (Input.GetButtonDown("Attack_Vertical"))
-        {
-            var moveY = animator.GetFloat("MoveY");
-            if (moveY > 0)
+            if (moveY > 0 && lastMoveY > 0)
             {
                 animator.SetTrigger("AttackUp");
             }
-            if (moveY < 0)
+            if (moveY < 0 && lastMoveY < 0)
             {
                 animator.SetTrigger("AttackDown");
             }
