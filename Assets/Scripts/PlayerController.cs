@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
             {
                 animator.SetTrigger("AttackUp");
             }
-            if (moveY < 0 && lastMoveY < 0)
+            if (moveY <= 0 && lastMoveY <= 0)
             {
                 animator.SetTrigger("AttackDown");
             }
