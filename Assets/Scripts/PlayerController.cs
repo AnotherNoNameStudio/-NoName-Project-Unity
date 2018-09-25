@@ -3,6 +3,8 @@
 public class PlayerController : MonoBehaviour
 {
 	public float moveSpeed = 3;
+    public int currentHealth = 4;
+    public int maxHealth = 4;
 	private Animator animator;
     private bool isPlayerMoving;
     private Vector2 lastDirectory;
